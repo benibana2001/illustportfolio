@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ImageDetail({ params }: { params: { id: string } }) {
-  const image = galleryImages.find(img => img.id === params.id);
+export default async function ImageDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const image = galleryImages.find(img => img.id === id);
 
   if (!image) {
     notFound();

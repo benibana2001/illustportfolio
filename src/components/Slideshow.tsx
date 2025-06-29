@@ -75,12 +75,6 @@ export default function Slideshow() {
             />
             {/* オーバーレイ */}
             <div className="absolute inset-0 bg-black/30" />
-            {/* タイトル */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-              <h2 className="text-white text-2xl md:text-3xl font-bold">
-                {image.title}
-              </h2>
-            </div>
           </div>
         ))}
       </div>

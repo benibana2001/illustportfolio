@@ -1,12 +1,12 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { galleryImages } from '@/data/gallery';
-import { useState, useEffect } from 'react';
+import { galleryItems } from '@/data/gallery-items';
+import VideoThumbnail from '@/components/VideoThumbnail';
 
-// クライアントコンポーネントとして分離
-const GalleryGrid = () => {
+export default function Gallery() {
   const [columns, setColumns] = useState(3);
 
   useEffect(() => {
@@ -21,11 +21,6 @@ const GalleryGrid = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  // 画像を列ごとに分割
-  const columnImages = Array.from({ length: columns }, (_, i) => {
-    return galleryImages.filter((_, index) => index % columns === i);
-  });
 
   // 縦横比を計算してCSSクラスを生成
   const getAspectRatioClass = (width: number, height: number) => {
@@ -44,41 +39,53 @@ const GalleryGrid = () => {
     }
   };
 
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-      {columnImages.map((column, columnIndex) => (
-        <div key={columnIndex} className="flex flex-col gap-4">
-          {column.map((image) => (
-            <div key={image.id} className="group relative overflow-hidden rounded-lg bg-gray-800">
-              <Link href={`/gallery/${image.id}`} className="block">
-                <div className={`relative ${getAspectRatioClass(image.width, image.height)}`}>
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <h3 className="text-white text-lg font-medium">{image.title}</h3>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-};
+  // 画像を列ごとに分割
+  const columnItems = Array.from({ length: columns }, (_, i) => {
+    return galleryItems.filter((_, index) => index % columns === i);
+  });
 
-// サーバーコンポーネント
-export default function Gallery() {
+  // 動画クリックハンドラー
+  const handleVideoClick = (videoId: string) => {
+    window.open(`/gallery/video/${videoId}`, '_blank');
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-20">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Gallery</h1>
-        <GalleryGrid />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {columnItems.map((column, columnIndex) => (
+            <div key={columnIndex} className="flex flex-col gap-4">
+              {column.map((item) => (
+                <div key={item.id}>
+                  {item.type === 'image' ? (
+                    <Link href={`/gallery/${item.id}`}>
+                      <div className="group relative overflow-hidden rounded-lg bg-gray-800">
+                        <div className={`relative ${getAspectRatioClass(item.width, item.height)}`}>
+                          <Image
+                            src={item.imageUrl}
+                            alt={item.title}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            sizes="(max-width: 768px) 50vw, 33vw"
+                          />
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                          <h3 className="text-white text-lg font-medium">{item.title}</h3>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <VideoThumbnail
+                      video={item}
+                      onClick={() => handleVideoClick(item.id)}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
