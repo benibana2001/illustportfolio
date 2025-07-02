@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import Slideshow from '@/components/Slideshow';
+import HeroSlideshow from '@/components/HeroSlideshow';
 import { featuredImageIds } from '@/data/featured';
 import { fanartImageIds } from '@/data/fanart';
 import { originalImageIds } from '@/data/original';
@@ -24,10 +24,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      {/* スライドショー */}
-      <div className="w-full">
-        <Slideshow />
-      </div>
+      {/* ヒーロースライドショー */}
+      <HeroSlideshow />
 
       {/* メインコンテンツ */}
       <div className="container mx-auto px-4 py-16">
