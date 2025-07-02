@@ -44,11 +44,14 @@ export default function Home() {
           </div>
         </div>
 
-        <h1 className="text-4xl font-bold mb-8 text-center">
+        <h1 className="text-2xl font-bold mb-8 text-center">
           べにばな
         </h1>
-        <p className="text-xl text-center text-gray-300 mb-16">
-          ようこそ！私の作品をご覧ください。
+        <p className="text-base text-center text-gray-300 mb-2">
+          個人でイラストを描いています。ファンアートが多いです。
+        </p>
+        <p className="text-base text-center text-gray-300 mb-16">
+          その他BlenderやLive2Dを使用した制作も行っています。
         </p>
 
         {/* おすすめ作品セクション */}
