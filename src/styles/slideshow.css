@@ -1,0 +1,36 @@
+/* Hero Slideshow Animations */
+
+/* アニメーションパターン1: 拡大 */
+@keyframes zoomAnimation {
+  0% { transform: scale(1.0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.0); }
+}
+
+/* アニメーションパターン2: 上方向へのパン */
+@keyframes panUpAnimation {
+  0% { transform: scale(1.1) translateY(0); }
+  100% { transform: scale(1.1) translateY(-7.5%); }
+}
+
+/* アニメーションパターン3: 下方向へのパン */
+@keyframes panDownAnimation {
+  0% { transform: scale(1.1) translateY(0); }
+  100% { transform: scale(1.1) translateY(7.5%); }
+}
+
+.animate-zoom {
+  animation: zoomAnimation 8000ms ease-in-out infinite;
+}
+
+.animate-pan-up {
+  animation: panUpAnimation 8000ms ease-in-out infinite;
+}
+
+.animate-pan-down {
+  animation: panDownAnimation 8000ms ease-in-out infinite;
+}
+
+.slideshow-transition {
+  transition: all 1000ms ease-in-out;
+}
