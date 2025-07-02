@@ -5,6 +5,7 @@ export interface GalleryImage {
   width: number;
   height: number;
   type: 'image';
+  category: 'fanart' | 'original' | 'other';
 }
 
 export interface GalleryVideo {
@@ -16,6 +17,7 @@ export interface GalleryVideo {
   height: number;
   duration: number; // 秒
   type: 'video';
+  category: 'fanart' | 'original' | 'other';
 }
 
 export type GalleryItem = GalleryImage | GalleryVideo; 

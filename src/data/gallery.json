@@ -1,184 +1,82 @@
 [
   {
-    "id": "dummy-1",
-    "title": "ダミー画像 1",
-    "imageUrl": "/images/dummy-1.jpg",
-    "width": 960,
-    "height": 1200
+    "id": "til-2024-01-30-01",
+    "title": "Til 2024 01 30 01",
+    "imageUrl": "/images/til-2024-01-30-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   },
   {
-    "id": "dummy-2",
-    "title": "ダミー画像 2",
-    "imageUrl": "/images/dummy-2.jpg",
-    "width": 1193,
-    "height": 1538
+    "id": "til-2025-04-02-01",
+    "title": "Til 2025 04 02 01",
+    "imageUrl": "/images/til-2025-04-02-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "original"
   },
   {
-    "id": "dummy-3",
-    "title": "ダミー画像 3",
-    "imageUrl": "/images/dummy-3.jpg",
-    "width": 1128,
-    "height": 960
+    "id": "til-2025-05-16-02",
+    "title": "Til 2025 05 16 02",
+    "imageUrl": "/images/til-2025-05-16-02.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   },
   {
-    "id": "dummy-4",
-    "title": "ダミー画像 4",
-    "imageUrl": "/images/dummy-4.jpg",
-    "width": 981,
-    "height": 1114
+    "id": "til-2025-05-26-01",
+    "title": "Til 2025 05 26 01",
+    "imageUrl": "/images/til-2025-05-26-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "original"
   },
   {
-    "id": "dummy-5",
-    "title": "ダミー画像 5",
-    "imageUrl": "/images/dummy-5.jpg",
-    "width": 1097,
-    "height": 1238
+    "id": "til-2025-05-27-01",
+    "title": "Til 2025 05 27 01",
+    "imageUrl": "/images/til-2025-05-27-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   },
   {
-    "id": "dummy-6",
-    "title": "ダミー画像 6",
-    "imageUrl": "/images/dummy-6.jpg",
-    "width": 822,
-    "height": 1138
+    "id": "til-2025-05-29-01",
+    "title": "Til 2025 05 29 01",
+    "imageUrl": "/images/til-2025-05-29-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "original"
   },
   {
-    "id": "dummy-7",
-    "title": "ダミー画像 7",
-    "imageUrl": "/images/dummy-7.jpg",
-    "width": 996,
-    "height": 1575
+    "id": "til-2025-05-29-03",
+    "title": "Til 2025 05 29 03",
+    "imageUrl": "/images/til-2025-05-29-03.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   },
   {
-    "id": "dummy-8",
-    "title": "ダミー画像 8",
-    "imageUrl": "/images/dummy-8.jpg",
-    "width": 846,
-    "height": 1238
+    "id": "til-2025-05-30-01",
+    "title": "Til 2025 05 30 01",
+    "imageUrl": "/images/til-2025-05-30-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "original"
   },
   {
-    "id": "dummy-9",
-    "title": "ダミー画像 9",
-    "imageUrl": "/images/dummy-9.jpg",
-    "width": 887,
-    "height": 1132
+    "id": "til-2025-06-14-02",
+    "title": "Til 2025 06 14 02",
+    "imageUrl": "/images/til-2025-06-14-02.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   },
   {
-    "id": "dummy-10",
-    "title": "ダミー画像 10",
-    "imageUrl": "/images/dummy-10.jpg",
-    "width": 1160,
-    "height": 1038
-  },
-  {
-    "id": "dummy-11",
-    "title": "ダミー画像 11",
-    "imageUrl": "/images/dummy-11.jpg",
-    "width": 872,
-    "height": 777
-  },
-  {
-    "id": "dummy-12",
-    "title": "ダミー画像 12",
-    "imageUrl": "/images/dummy-12.jpg",
-    "width": 1015,
-    "height": 665
-  },
-  {
-    "id": "dummy-13",
-    "title": "ダミー画像 13",
-    "imageUrl": "/images/dummy-13.jpg",
-    "width": 867,
-    "height": 1157
-  },
-  {
-    "id": "dummy-14",
-    "title": "ダミー画像 14",
-    "imageUrl": "/images/dummy-14.jpg",
-    "width": 978,
-    "height": 815
-  },
-  {
-    "id": "dummy-15",
-    "title": "ダミー画像 15",
-    "imageUrl": "/images/dummy-15.jpg",
-    "width": 875,
-    "height": 1198
-  },
-  {
-    "id": "dummy-16",
-    "title": "ダミー画像 16",
-    "imageUrl": "/images/dummy-16.jpg",
-    "width": 974,
-    "height": 636
-  },
-  {
-    "id": "dummy-17",
-    "title": "ダミー画像 17",
-    "imageUrl": "/images/dummy-17.jpg",
-    "width": 893,
-    "height": 758
-  },
-  {
-    "id": "dummy-18",
-    "title": "ダミー画像 18",
-    "imageUrl": "/images/dummy-18.jpg",
-    "width": 950,
-    "height": 1570
-  },
-  {
-    "id": "dummy-19",
-    "title": "ダミー画像 19",
-    "imageUrl": "/images/dummy-19.jpg",
-    "width": 837,
-    "height": 1243
-  },
-  {
-    "id": "dummy-20",
-    "title": "ダミー画像 20",
-    "imageUrl": "/images/dummy-20.jpg",
-    "width": 1029,
-    "height": 923
-  },
-  {
-    "id": "dummy-21",
-    "title": "ダミー画像 21",
-    "imageUrl": "/images/dummy-21.jpg",
-    "width": 1186,
-    "height": 1273
-  },
-  {
-    "id": "dummy-22",
-    "title": "ダミー画像 22",
-    "imageUrl": "/images/dummy-22.jpg",
-    "width": 1129,
-    "height": 805
-  },
-  {
-    "id": "dummy-23",
-    "title": "ダミー画像 23",
-    "imageUrl": "/images/dummy-23.jpg",
-    "width": 949,
-    "height": 612
-  },
-  {
-    "id": "dummy-24",
-    "title": "ダミー画像 24",
-    "imageUrl": "/images/dummy-24.jpg",
-    "width": 852,
-    "height": 1058
-  },
-  {
-    "id": "dummy-25",
-    "title": "ダミー画像 25",
-    "imageUrl": "/images/dummy-25.jpg",
-    "width": 826,
-    "height": 828
-  },
-  {
-    "id": "dummy-26",
-    "title": "ダミー画像 26",
-    "imageUrl": "/images/dummy-26.jpg",
-    "width": 828,
-    "height": 1118
+    "id": "til-2025-06-27-01",
+    "title": "Til 2025 06 27 01",
+    "imageUrl": "/images/til-2025-06-27-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "original"
   }
 ]

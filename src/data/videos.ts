@@ -9,7 +9,8 @@ export const galleryVideos: GalleryVideo[] = [
     width: 1280,
     height: 720,
     duration: 30,
-    type: 'video'
+    type: 'video',
+    category: 'fanart'
   },
   {
     id: 'video-2',
@@ -19,7 +20,8 @@ export const galleryVideos: GalleryVideo[] = [
     width: 1280,
     height: 720,
     duration: 45,
-    type: 'video'
+    type: 'video',
+    category: 'original'
   },
   {
     id: 'video-3',
@@ -29,6 +31,7 @@ export const galleryVideos: GalleryVideo[] = [
     width: 1280,
     height: 720,
     duration: 60,
-    type: 'video'
+    type: 'video',
+    category: 'other'
   }
 ]; 
