@@ -1,6 +1,7 @@
 export interface GalleryImage {
   id: string;
   title: string;
+  description?: string;
   imageUrl: string;
   width: number;
   height: number;
@@ -11,6 +12,7 @@ export interface GalleryImage {
 export interface GalleryVideo {
   id: string;
   title: string;
+  description?: string;
   videoUrl: string;
   thumbnailUrl: string;
   width: number;

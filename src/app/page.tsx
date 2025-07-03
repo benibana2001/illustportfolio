@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from 'next/link';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import { featuredImageIds } from '@/data/featured';
-import { fanartImageIds } from '@/data/fanart';
-import { originalImageIds } from '@/data/original';
 import { galleryImages } from '@/data/gallery';
 
 export default function Home() {
@@ -14,12 +12,12 @@ export default function Home() {
 
   // FanArt作品を取得（最大6件）
   const fanartImages = galleryImages.filter(image =>
-    fanartImageIds.includes(image.id)
+    image.category === 'fanart'
   ).slice(0, 6);
 
   // Original作品を取得（最大6件）
   const originalImages = galleryImages.filter(image =>
-    originalImageIds.includes(image.id)
+    image.category === 'original'
   ).slice(0, 6);
 
   return (
@@ -52,9 +50,9 @@ export default function Home() {
           その他BlenderやLive2Dを使用した制作も行っています。
         </p>
 
-        {/* おすすめ作品セクション */}
+        {/* Galleryセクション */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">おすすめ作品</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {featuredImages.map((image) => (
               <Link href={`/gallery/${image.id}`} key={image.id}>

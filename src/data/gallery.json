@@ -1,15 +1,17 @@
 [
   {
     "id": "til-2024-01-30-01",
-    "title": "Til 2024 01 30 01",
+    "title": "開発者の部屋",
+    "description": "プログラミングに集中する開発者の作業環境を描いたイラストです。モニターの光と静寂な空間が特徴的です。",
     "imageUrl": "/images/til-2024-01-30-01.jpg",
     "width": 800,
     "height": 600,
-    "category": "fanart"
+    "category": "original"
   },
   {
     "id": "til-2025-04-02-01",
-    "title": "Til 2025 04 02 01",
+    "title": "青い部屋",
+    "description": "青を基調とした落ち着いた室内空間。光と影のコントラストが美しく表現されています。",
     "imageUrl": "/images/til-2025-04-02-01.jpg",
     "width": 800,
     "height": 600,
@@ -17,7 +19,8 @@
   },
   {
     "id": "til-2025-05-16-02",
-    "title": "Til 2025 05 16 02",
+    "title": "堰代ミコ-JackPot衣装",
+    "description": "堰代ミコのJackPot衣装を着用したファンアートです。キャラクターの魅力を最大限に引き出しました。",
     "imageUrl": "/images/til-2025-05-16-02.jpg",
     "width": 800,
     "height": 600,
@@ -25,15 +28,17 @@
   },
   {
     "id": "til-2025-05-26-01",
-    "title": "Til 2025 05 26 01",
+    "title": "紫水キキ-Fanart",
+    "description": "紫水キキのファンアートです。キャラクターの個性と魅力を表現することを心がけました。",
     "imageUrl": "/images/til-2025-05-26-01.jpg",
     "width": 800,
     "height": 600,
-    "category": "original"
+    "category": "fanart"
   },
   {
     "id": "til-2025-05-27-01",
-    "title": "Til 2025 05 27 01",
+    "title": "獅子王クリス-Fanart",
+    "description": "獅子王クリスのファンアートです。力強さと優雅さを併せ持つキャラクターを描きました。",
     "imageUrl": "/images/til-2025-05-27-01.jpg",
     "width": 800,
     "height": 600,
@@ -41,15 +46,17 @@
   },
   {
     "id": "til-2025-05-29-01",
-    "title": "Til 2025 05 29 01",
+    "title": "御景ツキ-Fanart",
+    "description": "御景ツキのファンアートです。キャラクターの繊細な美しさを表現しました。",
     "imageUrl": "/images/til-2025-05-29-01.jpg",
     "width": 800,
     "height": 600,
-    "category": "original"
+    "category": "fanart"
   },
   {
     "id": "til-2025-05-29-03",
-    "title": "Til 2025 05 29 03",
+    "title": "島村シャルロット-JackPot衣装",
+    "description": "島村シャルロットのJackPot衣装版です。華やかな衣装とキャラクターの魅力を同時に表現しました。",
     "imageUrl": "/images/til-2025-05-29-03.jpg",
     "width": 800,
     "height": 600,
@@ -57,26 +64,29 @@
   },
   {
     "id": "til-2025-05-30-01",
-    "title": "Til 2025 05 30 01",
+    "title": "蛇宵ティア-Fanart",
+    "description": "蛇宵ティアのファンアートです。神秘的な雰囲気とキャラクターの魅力を描きました。",
     "imageUrl": "/images/til-2025-05-30-01.jpg",
-    "width": 800,
-    "height": 600,
-    "category": "original"
-  },
-  {
-    "id": "til-2025-06-14-02",
-    "title": "Til 2025 06 14 02",
-    "imageUrl": "/images/til-2025-06-14-02.jpg",
     "width": 800,
     "height": 600,
     "category": "fanart"
   },
   {
-    "id": "til-2025-06-27-01",
-    "title": "Til 2025 06 27 01",
-    "imageUrl": "/images/til-2025-06-27-01.jpg",
+    "id": "til-2025-06-14-02",
+    "title": "休日の会社員",
+    "description": "休日にリラックスする会社員の様子を描いたオリジナルイラストです。日常の穏やかな瞬間を表現しています。",
+    "imageUrl": "/images/til-2025-06-14-02.jpg",
     "width": 800,
     "height": 600,
     "category": "original"
+  },
+  {
+    "id": "til-2025-06-27-01",
+    "title": "堰代ミコ-第一衣装",
+    "description": "堰代ミコの第一衣装を着用したファンアートです。オリジナルの魅力を大切にしながら描きました。",
+    "imageUrl": "/images/til-2025-06-27-01.jpg",
+    "width": 800,
+    "height": 600,
+    "category": "fanart"
   }
 ]
