@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link';
 import HeroSlideshow from '@/components/HeroSlideshow';
-import { featuredImageIds } from '@/data/featured';
 import { galleryImages } from '@/data/gallery';
 
 export default function Home() {
-  // トップページに表示する画像を取得
-  const featuredImages = galleryImages.filter(image =>
-    featuredImageIds.includes(image.id)
-  );
-
   // FanArt作品を取得（最大6件）
   const fanartImages = galleryImages.filter(image =>
     image.category === 'fanart'
@@ -50,30 +44,6 @@ export default function Home() {
           その他BlenderやLive2Dを使用した制作も行っています。
         </p>
 
-        {/* Galleryセクション */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {featuredImages.map((image) => (
-              <Link href={`/gallery/${image.id}`} key={image.id}>
-                <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
-                  <div className="aspect-[3/4] relative">
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <h3 className="text-white text-lg font-medium">{image.title}</h3>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
 
         {/* FanArtセクション */}
         <div className="mb-16">
