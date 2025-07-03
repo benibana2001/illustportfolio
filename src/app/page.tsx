@@ -48,7 +48,7 @@ export default function Home() {
         {/* FanArtセクション */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">FanArt</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {fanartImages.map((image) => (
               <Link href={`/gallery/${image.id}`} key={image.id}>
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
@@ -68,12 +68,20 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="text-center">
+            <Link
+              href="/fanart"
+              className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+            >
+              ファンアート一覧を見る
+            </Link>
+          </div>
         </div>
 
         {/* Originalセクション */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Original</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {originalImages.map((image) => (
               <Link href={`/gallery/${image.id}`} key={image.id}>
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
@@ -92,6 +100,14 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+          <div className="text-center">
+            <Link
+              href="/original"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+            >
+              オリジナル一覧を見る
+            </Link>
           </div>
         </div>
 
