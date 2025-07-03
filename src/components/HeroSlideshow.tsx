@@ -12,7 +12,7 @@ export default function HeroSlideshow() {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // スライドショーに表示する画像を取得
-  const slideshowImages = galleryImages.filter(image => 
+  const slideshowImages = galleryImages.filter(image =>
     heroSlideshowImageIds.includes(image.id)
   );
 
@@ -22,15 +22,15 @@ export default function HeroSlideshow() {
 
     const interval = setInterval(() => {
       setIsTransitioning(true);
-      
+
       // トランジション開始後、少し遅らせて画像を切り替える
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
           (prevIndex + 1) % slideshowImages.length
         );
         setIsTransitioning(false);
       }, heroSlideshowConfig.transition.duration / 2);
-      
+
     }, heroSlideshowConfig.autoplaySpeed);
 
     return () => clearInterval(interval);
@@ -62,9 +62,8 @@ export default function HeroSlideshow() {
   return (
     <>
 
-      <div className={`w-full h-96 md:h-[30rem] lg:h-[36rem] relative overflow-hidden bg-gray-900 slideshow-transition ${
-        isTransitioning ? 'opacity-95' : 'opacity-100'
-      }`}>
+      <div className={`w-full h-96 md:h-[30rem] lg:h-[36rem] relative overflow-hidden bg-gray-900 slideshow-transition ${isTransitioning ? 'opacity-95' : 'opacity-100'
+        }`}>
         <div className="flex h-full">
           {/* メイン画像エリア（左4/3） */}
           <Link href={`/gallery/${mainImage.id}`} className="w-3/4 relative overflow-hidden block group">
@@ -80,15 +79,11 @@ export default function HeroSlideshow() {
             </div>
             {/* オーバーレイとタイトル */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent group-hover:from-black/40 transition-all duration-300" />
-            <div className={`absolute bottom-4 left-4 text-white slideshow-transition ${
-              isTransitioning ? 'opacity-70 translate-y-2' : 'opacity-100 translate-y-0'
-            }`}>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 group-hover:text-blue-200 transition-colors duration-300">
+            <div className={`absolute bottom-4 left-4 text-white slideshow-transition ${isTransitioning ? 'opacity-70 translate-y-2' : 'opacity-100 translate-y-0'
+              }`}>
+              <h2 className="text-xl md:text-2xl lg:text-3xl mb-2 group-hover:text-blue-200 transition-colors duration-300">
                 {mainImage.title}
               </h2>
-              <p className="text-sm md:text-base opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                メイン作品 - クリックして詳細を見る
-              </p>
             </div>
           </Link>
 
@@ -106,9 +101,8 @@ export default function HeroSlideshow() {
                 />
               </div>
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
-              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${
-                isTransitioning ? 'opacity-70' : 'opacity-100'
-              }`}>
+              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${isTransitioning ? 'opacity-70' : 'opacity-100'
+                }`}>
                 <p className="text-xs font-medium truncate group-hover:text-blue-200 transition-colors">{sub1Image.title}</p>
               </div>
             </Link>
@@ -125,9 +119,8 @@ export default function HeroSlideshow() {
                 />
               </div>
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
-              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${
-                isTransitioning ? 'opacity-70' : 'opacity-100'
-              }`}>
+              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${isTransitioning ? 'opacity-70' : 'opacity-100'
+                }`}>
                 <p className="text-xs font-medium truncate group-hover:text-blue-200 transition-colors">{sub2Image.title}</p>
               </div>
             </Link>
@@ -144,9 +137,8 @@ export default function HeroSlideshow() {
                 />
               </div>
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
-              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${
-                isTransitioning ? 'opacity-70' : 'opacity-100'
-              }`}>
+              <div className={`absolute bottom-2 left-2 text-white slideshow-transition ${isTransitioning ? 'opacity-70' : 'opacity-100'
+                }`}>
                 <p className="text-xs font-medium truncate group-hover:text-blue-200 transition-colors">{sub3Image.title}</p>
               </div>
             </Link>
@@ -154,9 +146,8 @@ export default function HeroSlideshow() {
         </div>
 
         {/* インジケーター */}
-        <div className={`absolute bottom-4 right-4 flex space-x-2 slideshow-transition ${
-          isTransitioning ? 'opacity-70' : 'opacity-100'
-        }`}>
+        <div className={`absolute bottom-4 right-4 flex space-x-2 slideshow-transition ${isTransitioning ? 'opacity-70' : 'opacity-100'
+          }`}>
           {slideshowImages.slice(0, Math.min(10, slideshowImages.length)).map((_, index) => (
             <button
               key={index}
@@ -169,9 +160,8 @@ export default function HeroSlideshow() {
                   }, heroSlideshowConfig.transition.duration / 2);
                 }
               }}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
-              }`}
+              className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+                }`}
               aria-label={`スライド ${index + 1}`}
             />
           ))}
@@ -182,9 +172,8 @@ export default function HeroSlideshow() {
           onClick={() => {
             // 設定を動的に変更する場合は別途実装が必要
           }}
-          className={`absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all slideshow-transition ${
-            isTransitioning ? 'opacity-70' : 'opacity-100'
-          }`}
+          className={`absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all slideshow-transition ${isTransitioning ? 'opacity-70' : 'opacity-100'
+            }`}
           aria-label="スライドショーの制御"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
