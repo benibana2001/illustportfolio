@@ -58,11 +58,12 @@ export default function Home() {
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
                   <div className="aspect-[3/4] relative">
                     <Image
-                      src={image.imageUrl}
+                      src={(image as {imageUrl: string}).imageUrl}
                       alt={image.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, 33vw"
+                      unoptimized={'type' in image && (image as {type?: string}).type === 'animation'}
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
@@ -91,11 +92,12 @@ export default function Home() {
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
                   <div className="aspect-[3/4] relative">
                     <Image
-                      src={image.imageUrl}
+                      src={(image as {imageUrl: string}).imageUrl}
                       alt={image.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, 33vw"
+                      unoptimized={'type' in image && (image as {type?: string}).type === 'animation'}
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">

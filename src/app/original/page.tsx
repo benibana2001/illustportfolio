@@ -76,26 +76,32 @@ export default function OriginalGallery() {
               <div key={columnIndex} className="flex flex-col gap-4">
                 {column.map((item) => (
                   <div key={item.id}>
-                    {item.type === 'image' ? (
+                    {item.type === 'image' || ('type' in item && (item as {type?: string}).type === 'animation') ? (
                       <Link href={`/gallery/${item.id}`}>
                         <div className="group relative overflow-hidden rounded-lg bg-gray-800">
                           <div className={`relative ${getAspectRatioClass(item.width, item.height)}`}>
                             <Image
-                              src={item.imageUrl}
+                              src={(item as {imageUrl: string}).imageUrl}
                               alt={item.title}
                               fill
                               className="object-cover transition-transform duration-300 group-hover:scale-105"
                               sizes="(max-width: 768px) 50vw, 33vw"
+                              unoptimized={'type' in item && (item as {type?: string}).type === 'animation'}
                             />
                           </div>
                           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                             <h3 className="text-white text-lg font-medium">{item.title}</h3>
+                            {'type' in item && (item as {type?: string}).type === 'animation' && (
+                              <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                                GIF
+                              </div>
+                            )}
                           </div>
                         </div>
                       </Link>
                     ) : (
                       <VideoThumbnail
-                        video={item}
+                        video={item as any} // eslint-disable-line @typescript-eslint/no-explicit-any
                         onClick={() => handleVideoClick(item.id)}
                       />
                     )}

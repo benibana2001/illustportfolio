@@ -9,6 +9,17 @@
     "category": "original"
   },
   {
+    "id": "til-2023-10-20-03",
+    "title": "獅子王クリス-アニメーション",
+    "description": "獅子王クリスのアニメーション作品です。キャラクターの動きと表情の変化を楽しめる作品に仕上げました。",
+    "imageUrl": "/images/til-2023-10-20-03.webp",
+    "videoUrl": "/images/til-2023-10-20-03.mp4",
+    "width": 800,
+    "height": 600,
+    "category": "fanart",
+    "type": "animation"
+  },
+  {
     "id": "til-2025-04-02-01",
     "title": "青い部屋",
     "description": "青を基調とした落ち着いた室内空間。光と影のコントラストが美しく表現されています。",
@@ -17,8 +28,8 @@
     "height": 600,
     "category": "original"
   },
-  
-{
+
+  {
     "id": "til-2024-09-04-01",
     "title": "堰代ミコ-Fanart",
     "description": "堰代ミコの魅力を表現したファンアートです。彼女の特徴的な表情と雰囲気を大切に描きました。",
@@ -91,7 +102,7 @@
     "height": 600,
     "category": "fanart"
   },
-{
+  {
     "id": "til-2025-05-16-02",
     "title": "堰代ミコ-JackPot衣装",
     "description": "堰代ミコのJackPot衣装を着用したファンアートです。キャラクターの魅力を最大限に引き出しました。",
@@ -289,7 +300,7 @@
     "height": 600,
     "category": "fanart"
   },
-    {
+  {
     "id": "til-2024-09-12-01",
     "title": "堰代ミコ-魔女衣装",
     "description": "堰代ミコの魔女衣装ファンアートです。ハロウィンらしい魔女衣装と彼女のチャーミングな魅力を表現しました。",

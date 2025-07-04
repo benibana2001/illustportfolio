@@ -22,4 +22,16 @@ export interface GalleryVideo {
   category: 'fanart' | 'original' | 'other';
 }
 
-export type GalleryItem = GalleryImage | GalleryVideo; 
+export interface GalleryAnimation {
+  id: string;
+  title: string;
+  description?: string;
+  imageUrl: string; // WebPアニメーション（サムネイル用）
+  videoUrl: string; // MP4動画（詳細画面用）
+  width: number;
+  height: number;
+  type: 'animation';
+  category: 'fanart' | 'original' | 'other';
+}
+
+export type GalleryItem = GalleryImage | GalleryVideo | GalleryAnimation; 

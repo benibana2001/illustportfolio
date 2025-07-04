@@ -31,13 +31,28 @@ export default async function ImageDetail({ params }: { params: Promise<{ id: st
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-[3/4] w-full max-h-[80vh]">
-              <Image
-                src={image.imageUrl}
-                alt={image.title}
-                fill
-                className="object-contain"
-                priority
-              />
+              {'videoUrl' in image ? (
+                <video
+                  src={(image as {videoUrl: string}).videoUrl}
+                  controls
+                  controlsList="nodownload"
+                  autoPlay
+                  loop
+                  muted
+                  className="w-full h-full object-contain rounded-lg"
+                  poster={image.imageUrl}
+                >
+                  お使いのブラウザは動画再生に対応していません。
+                </video>
+              ) : (
+                <Image
+                  src={image.imageUrl}
+                  alt={image.title}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              )}
             </div>
             <div className="lg:sticky lg:top-8">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
