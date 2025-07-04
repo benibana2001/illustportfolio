@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link';
 import HeroSlideshow from '@/components/HeroSlideshow';
+import SocialLinks from '@/components/SocialLinks';
 import { galleryImages } from '@/data/gallery';
+import { profileData } from '@/data/profile';
 
 export default function Home() {
   // FanArt作品を取得（最大6件）
@@ -23,9 +25,9 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16">
         {/* アイコン */}
         <div className="flex justify-center mb-8">
-          <div className="relative w-32 h-32 md:w-40 md:h-40">
+          <div className={`relative ${profileData.avatarSettings.home.mobile} ${profileData.avatarSettings.home.desktop}`}>
             <Image
-              src="/images/avatar.png"
+              src={profileData.avatar}
               alt="プロフィールアイコン"
               fill
               className="object-cover rounded-full border-4 border-white/20 shadow-lg"
@@ -35,14 +37,16 @@ export default function Home() {
         </div>
 
         <h1 className="text-2xl font-bold mb-8 text-center">
-          べにばな
+          {profileData.name}
         </h1>
-        <p className="text-base text-center text-gray-300 mb-2">
-          個人でイラストを描いています。ファンアートが多いです。
-        </p>
-        <p className="text-base text-center text-gray-300 mb-16">
-          その他BlenderやLive2Dを使用した制作も行っています。
-        </p>
+        {profileData.introduction.home.map((text, index) => (
+          <p key={index} className="text-base text-center text-gray-300 mb-2">
+            {text}
+          </p>
+        ))}
+        
+        {/* SNSリンク */}
+        <SocialLinks className="flex justify-center gap-4 mt-6 mb-16" />
 
 
         {/* FanArtセクション */}
