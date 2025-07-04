@@ -62,7 +62,7 @@ export default function OriginalGallery() {
           >
             ← ホームに戻る
           </Link>
-          <h1 className="text-4xl font-bold text-center">Original Works</h1>
+          <h1 className="text-3xl font-bold text-center">Original Works</h1>
           <p className="text-center text-gray-300 mt-4">オリジナル作品 ({originalItems.length}件)</p>
         </div>
         

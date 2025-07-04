@@ -29,7 +29,7 @@ export default async function VideoDetail({ params }: { params: Promise<{ id: st
           ← ギャラリーに戻る
         </Link>
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center">{video.title}</h1>
+          <h1 className="text-3xl font-bold mb-8 text-center">{video.title}</h1>
           <div className="relative aspect-video w-full bg-gray-800 rounded-lg overflow-hidden">
             <video
               src={video.videoUrl}

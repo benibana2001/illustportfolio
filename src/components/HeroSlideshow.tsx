@@ -62,7 +62,7 @@ export default function HeroSlideshow() {
   return (
     <>
 
-      <div className={`w-full h-96 md:h-[30rem] lg:h-[36rem] relative overflow-hidden bg-gray-900 slideshow-transition ${isTransitioning ? 'opacity-95' : 'opacity-100'
+      <div className={`w-full h-[28rem] md:h-[35rem] lg:h-[42rem] relative overflow-hidden bg-gray-900 slideshow-transition ${isTransitioning ? 'opacity-95' : 'opacity-100'
         }`}>
         <div className="flex h-full">
           {/* メイン画像エリア（左4/3） */}
