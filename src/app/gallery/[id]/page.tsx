@@ -28,7 +28,6 @@ export default async function ImageDetail({ params }: { params: Promise<{ id: st
           ← ギャラリーに戻る
         </Link>
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-center">{image.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="relative aspect-[3/4] w-full max-h-[80vh]">
               <Image
@@ -39,26 +38,26 @@ export default async function ImageDetail({ params }: { params: Promise<{ id: st
                 priority
               />
             </div>
-            {image.description && (
-              <div className="lg:sticky lg:top-8">
-                <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                  <h2 className="text-2xl font-semibold mb-4 text-gray-200">作品について</h2>
-                  <p className="text-gray-300 leading-relaxed text-lg">{image.description}</p>
-                  <div className="mt-6 pt-4 border-t border-gray-600">
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        カテゴリー: {image.category === 'fanart' ? 'ファンアート' : 'オリジナル'}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                        サイズ: {image.width} × {image.height}
-                      </span>
-                    </div>
+            <div className="lg:sticky lg:top-8">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
+                <h1 className="text-2xl font-semibold mb-4 text-gray-200">{image.title}</h1>
+                <p className="text-gray-300 leading-relaxed text-lg mb-6">
+                  {image.description || 'この作品について詳しい説明はありません。'}
+                </p>
+                <div className="pt-4 border-t border-gray-600">
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                      カテゴリー: {image.category === 'fanart' ? 'ファンアート' : 'オリジナル'}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      サイズ: {image.width} × {image.height}
+                    </span>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

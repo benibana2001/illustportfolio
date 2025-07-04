@@ -81,7 +81,7 @@ export default function HeroSlideshow() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent group-hover:from-black/40 transition-all duration-300" />
             <div className={`absolute bottom-4 left-4 text-white slideshow-transition ${isTransitioning ? 'opacity-70 translate-y-2' : 'opacity-100 translate-y-0'
               }`}>
-              <h2 className="text-xl md:text-2xl lg:text-3xl mb-2 group-hover:text-blue-200 transition-colors duration-300">
+              <h2 className="text-lg md:text-xl lg:text-2xl mb-2 group-hover:text-blue-200 transition-colors duration-300">
                 {mainImage.title}
               </h2>
             </div>
