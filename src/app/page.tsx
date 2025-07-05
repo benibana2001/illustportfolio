@@ -44,26 +44,26 @@ export default function Home() {
             {text}
           </p>
         ))}
-        
+
         {/* SNSリンク */}
         <SocialLinks className="flex justify-center gap-4 mt-6 mb-16" />
 
 
         {/* FanArtセクション */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">FanArt</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">ファンアート</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {fanartImages.map((image) => (
               <Link href={`/gallery/${image.id}`} key={image.id}>
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
                   <div className="aspect-[3/4] relative">
                     <Image
-                      src={(image as {imageUrl: string}).imageUrl}
+                      src={(image as { imageUrl: string }).imageUrl}
                       alt={image.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, 33vw"
-                      unoptimized={'type' in image && (image as {type?: string}).type === 'animation'}
+                      unoptimized={'type' in image && (image as { type?: string }).type === 'animation'}
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
@@ -76,28 +76,28 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/fanart"
-              className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+              className="inline-block border-1 borde-white  hover:bg-gray-700 text-white font-semibold py-2.5 px-8 rounded-lg transition-colors duration-300"
             >
-              ファンアート一覧を見る
+              More
             </Link>
           </div>
         </div>
 
         {/* Originalセクション */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Original</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">オリジナル</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {originalImages.map((image) => (
               <Link href={`/gallery/${image.id}`} key={image.id}>
                 <div className="group relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 hover:scale-105">
                   <div className="aspect-[3/4] relative">
                     <Image
-                      src={(image as {imageUrl: string}).imageUrl}
+                      src={(image as { imageUrl: string }).imageUrl}
                       alt={image.title}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 50vw, 33vw"
-                      unoptimized={'type' in image && (image as {type?: string}).type === 'animation'}
+                      unoptimized={'type' in image && (image as { type?: string }).type === 'animation'}
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
@@ -110,9 +110,9 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/original"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+              className="inline-block border-1 border-white hover:bg-gray-700 text-white font-semibold py-2.5 px-8 rounded-lg transition-colors duration-300"
             >
-              オリジナル一覧を見る
+              more
             </Link>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="text-center">
           <Link
             href="/gallery"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
+            className="inline-block border-1 borde-white  hover:bg-gray-700 text-white font-semibold py-2.5 px-8 rounded-lg transition-colors duration-300"
           >
             すべての作品を見る
           </Link>

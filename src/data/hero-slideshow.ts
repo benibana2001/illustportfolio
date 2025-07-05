@@ -24,11 +24,9 @@ export const heroSlideshowConfig = {
 export const heroSlideshowImageIds = [
   "til-2025-04-17-01", //shimamura
   "til-2025-05-03-01", //shimamura-gold
-  "til-2025-04-02-01", //blue-room
   "til-2024-09-04-01", //shimamura-gold
   "til-2025-05-30-01", //tier
   "til-2025-06-27-01", //miko
-  "til-2024-01-30-01", //engineer-room
   "til-2025-04-19-01", //miko-tomb
   "til-2024-10-26-01", //miko-haloween
 ];
