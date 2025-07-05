@@ -20,6 +20,17 @@
     "type": "animation"
   },
   {
+    "id": "til-2024-07-25-01",
+    "title": "アニメーション作品",
+    "description": "流れるような動きと美しい表現を追求したアニメーション作品です。繊細な動きの変化をお楽しみください。",
+    "imageUrl": "/images/til-2024-07-25-01.webp",
+    "videoUrl": "/images/til-2024-07-25-01.mp4",
+    "width": 800,
+    "height": 800,
+    "category": "original",
+    "type": "animation"
+  },
+  {
     "id": "til-2025-04-02-01",
     "title": "青い部屋",
     "description": "青を基調とした落ち着いた室内空間。光と影のコントラストが美しく表現されています。",
